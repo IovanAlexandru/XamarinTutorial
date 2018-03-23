@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloWorld.ColorList;assembly=HelloWorld"
+             x:Class="HelloWorld.ColorList.ColorViewListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <local:ColorView Color="Red" DoubleTapped="ColorView_OnDoubleTapped"></local:ColorView>
+            <local:ColorView Color="Aqua" Tapped="ColorView_OnClicked"></local:ColorView>
+            <local:ColorView Color="Beige" Tapped="ColorView_OnClicked"></local:ColorView>
+            <local:ColorView Color="AliceBlue" Tapped="ColorView_OnClicked"></local:ColorView>
+            <local:ColorView Color="GreenYellow" Tapped="ColorView_OnClicked"></local:ColorView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

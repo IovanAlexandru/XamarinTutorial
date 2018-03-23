@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.GreetingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" Android="0,10,0,0"/>
+            </StackLayout.Padding>
+            <Label Text="Welcome to Xamarin.Forms!"
+                   BackgroundColor="Yellow"
+                   TextColor="Black"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start" />
+            <Label Text="Welcome to Xamarin.Forms!"
+                   BackgroundColor="Default"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start" />
+            <Label Text="Welcome to Xamarin.Forms!"
+                   TextColor="Default"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start" />
+            <Label Text="Welcome to Xamarin.Forms!"
+                   BackgroundColor="Accent"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start" />
+            <Label Text="Welcome to Xamarin.Forms!"
+                   TextColor="Accent"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"
+                   FontSize="22"
+                   FontAttributes="Italic"/>
+            <Label HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   FontSize="20"
+                   BackgroundColor="Red">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="I "></Span>
+                        <Span FontSize="22" FontAttributes="Bold">love</Span>
+                        <Span Text=" Xamarin.Forms"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

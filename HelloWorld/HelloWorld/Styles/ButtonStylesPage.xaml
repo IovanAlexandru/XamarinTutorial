@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Styles.ButtonStylesPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="BorderWidth" Value="3"></Setter>
+                <Setter Property="TextColor" Value="Red"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" Android="White"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" Android="White"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Carpe diem" Style="{StaticResource buttonStyle}"></Button>
+            <Button Text="Sapere aude" Style="{StaticResource buttonStyle}"></Button>
+            <Button Text="Discere faciendo" Style="{StaticResource buttonStyle}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
