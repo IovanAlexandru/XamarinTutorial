@@ -1,4 +1,5 @@
 ﻿using HelloWorld.Bindings;
+using HelloWorld.Bindings.CustomViews;
 using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
 using HelloWorld.ControlsDemo;
@@ -11,7 +12,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new SwitchTextConverterDemoPage();
+			MainPage = new NewCheckBoxDemoPage();
 		}
 
 		protected override void OnStart ()
