@@ -4,6 +4,7 @@ using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
 using HelloWorld.ControlsDemo;
 using HelloWorld.Grid;
+using HelloWorld.MVVM;
 using Xamarin.Forms;
 
 namespace HelloWorld
@@ -13,7 +14,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new GridBarChartDemoPage();
+			MainPage = new MvvmClock();
 		}
 
 		protected override void OnStart ()
