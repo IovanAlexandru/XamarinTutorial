@@ -1,4 +1,5 @@
 ﻿using HelloWorld.Bindings;
+using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
 using HelloWorld.ControlsDemo;
 using Xamarin.Forms;
@@ -10,7 +11,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new BindingModesDemoPage();
+			MainPage = new SwitchTextConverterDemoPage();
 		}
 
 		protected override void OnStart ()

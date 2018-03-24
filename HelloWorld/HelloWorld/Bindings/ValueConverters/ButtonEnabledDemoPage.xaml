@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:valueConverters="clr-namespace:HelloWorld.Bindings.ValueConverters;assembly=HelloWorld"
+             x:Class="HelloWorld.Bindings.ValueConverters.ButtonEnabledDemoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <valueConverters:IntToBoolConverter x:Key="intToBool" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Entry x:Name="entry" 
+                   Text="" 
+                   Placeholder="text to enable button" />
+            
+            <Button Text="Save or Send (or something)" 
+                    FontSize="Medium" 
+                    HorizontalOptions="Center" 
+                    IsEnabled="{Binding Source={x:Reference entry}, 
+                                        Path=Text.Length, 
+                                        Converter={StaticResource intToBool}}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:valueConverters="clr-namespace:HelloWorld.Bindings.ValueConverters;assembly=HelloWorld"
+             x:Class="HelloWorld.Bindings.ValueConverters.SwitchTextConverterDemoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <valueConverters:BoolToStringConverter 
+                x:Key="boolToString"
+                TrueText="Let's do it"
+                FalseText="Not now"/>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"
+                     VerticalOptions="CenterAndExpand">
+                <Label Text="Learn more?"/>
+                <Switch x:Name="learnMoreSwitch" VerticalOptions="Center"/>
+                <Label Text="{Binding Source={x:Reference learnMoreSwitch}, Path=IsToggled,
+                            Converter={StaticResource boolToString}}"
+                   HorizontalOptions="FillAndExpand"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                <Label Text="Subscribe?" />
+                <Switch x:Name="subscribeSwitch" VerticalOptions="Center" />
+                <Label Text="{Binding Source={x:Reference subscribeSwitch}, Path=IsToggled, Converter={StaticResource boolToString}}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                <Label Text="Leave page?"></Label>
+                <Switch x:Name="leavePageSwitch" VerticalOptions="Center"></Switch>
+                <Label HorizontalOptions="FillAndExpand">
+                    <Label.Text>
+                        <Binding Source="{x:Reference leavePageSwitch}" Path="IsToggled">
+                            <Binding.Converter>
+                                <valueConverters:BoolToStringConverter TrueText="Yes" FalseText="No"></valueConverters:BoolToStringConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.Text>
+                    <Label.TextColor>
+                        <Binding Source="{x:Reference leavePageSwitch}" Path="IsToggled">
+                            <Binding.Converter>
+                                <valueConverters:BoolToColorConverter TrueColor="Green" FalseColor="Red"></valueConverters:BoolToColorConverter>
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.TextColor>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
