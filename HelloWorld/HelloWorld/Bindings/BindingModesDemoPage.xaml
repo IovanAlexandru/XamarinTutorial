@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Bindings.BindingModesDemoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Slider">
+                <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Fill">
+            <StackLayout>
+                <Label Text="{Binding Source={x:Reference slider1}, Path=Value, StringFormat='Default with slider value of {0}'}"
+                       FontSize="{Binding Source={x:Reference slider1}, Path=Value }"></Label>
+
+                <Slider x:Name="slider1" Maximum="50"></Slider>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding Source={x:Reference slider2}, Path=Value, Mode=OneWay, StringFormat='OneWay with slider value of {0}'}"
+                       FontSize="{Binding Source={x:Reference slider2}, Path=Value, Mode=OneWay}"></Label>
+                <Slider x:Name="slider2" Maximum="50"></Slider>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding Source={x:Reference slider3}, Path=Value, Mode=OneWay, StringFormat='OneWayToSource with slider value of {0}'}"
+                       FontSize="{Binding Source={x:Reference slider3}, Path=Value, Mode=OneWayToSource}"></Label>
+                <Slider x:Name="slider3" Maximum="50"></Slider>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding Source={x:Reference slider4}, Path=Value, Mode=OneWay, StringFormat='TwoWay with slider value of {0}'}"
+                       FontSize="{Binding Source={x:Reference slider4}, Path=Value, Mode=TwoWay}"></Label>
+                <Slider x:Name="slider4" Maximum="50"></Slider>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,7 +10,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new WebviewDemo();
+			MainPage = new BindingModesDemoPage();
 		}
 
 		protected override void OnStart ()
