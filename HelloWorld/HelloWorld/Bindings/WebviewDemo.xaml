@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.Bindings.WebviewDemo">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Entry 
+                x:Name="urlLocation"
+                Keyboard="Url"
+                Placeholder="web address"/>
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="FillAndExpand"
+                         BindingContext="{x:Reference webView}">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="&#x21D0;" FontSize="Large"
+                            HorizontalOptions="FillAndExpand"
+                            IsEnabled="{Binding CanGoBack}"
+                            Clicked="OnGoBackClicked"/>
+                    <Button Text="&#x21D2;" FontSize="Large"
+                            HorizontalOptions="FillAndExpand"
+                            IsEnabled="{Binding CanGoForward}"
+                            Clicked="OnGoForwardClicked"/>
+                </StackLayout>
+                <WebView x:Name="webView"
+                         VerticalOptions="FillAndExpand"
+                         Source="{Binding Source={x:Reference urlLocation}, Path=Text}"></WebView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
