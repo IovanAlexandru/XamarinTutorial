@@ -1,4 +1,5 @@
-﻿using HelloWorld.Bitmaps;
+﻿using HelloWorld.Bindings;
+using HelloWorld.Bitmaps;
 using HelloWorld.ControlsDemo;
 using Xamarin.Forms;
 
@@ -9,7 +10,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new SliderDemoPage();
+			MainPage = new OpacityBindingCodePage();
 		}
 
 		protected override void OnStart ()
