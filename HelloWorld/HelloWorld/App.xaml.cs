@@ -10,7 +10,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new OpacityBindingXaml();
+			MainPage = new OpacityBindingCodeV2Page();
 		}
 
 		protected override void OnStart ()
