@@ -3,6 +3,7 @@ using HelloWorld.Bindings.CustomViews;
 using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
 using HelloWorld.ControlsDemo;
+using HelloWorld.Grid;
 using Xamarin.Forms;
 
 namespace HelloWorld
@@ -12,7 +13,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new NewCheckBoxDemoPage();
+			MainPage = new GridBarChartDemoPage();
 		}
 
 		protected override void OnStart ()
