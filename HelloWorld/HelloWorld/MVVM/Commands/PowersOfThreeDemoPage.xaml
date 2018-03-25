@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelloWorld.MVVM.Commands;assembly=HelloWorld"
+             x:Class="HelloWorld.MVVM.Commands.PowersOfThreeDemoPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PowersViewModel x:Key="vm">
+                <x:Arguments>
+                    <x:Double>3</x:Double>
+                </x:Arguments>
+            </local:PowersViewModel>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{StaticResource vm}">
+            <StackLayout Orientation="Horizontal"
+                         Spacing="0"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand">
+                <Label FontSize="Large"
+                       Text="{Binding BaseValue, StringFormat='{0}'}"/>
+                <Label FontSize="Small"
+                       Text="{Binding Exponent, StringFormat='{0}'}"/>
+                <Label Font="Large"
+                       Text="{Binding Power, StringFormat=' = {0}'}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="CenterAndExpand">
+                <Button Text="Increase"
+                        Command="{Binding IncreaseExponentCommand}"
+                        HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Decrease"
+                        Command="{Binding DecreaseExponentCommand}"
+                        HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
