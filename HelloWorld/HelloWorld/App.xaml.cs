@@ -2,6 +2,7 @@
 using HelloWorld.Bindings.CustomViews;
 using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
+using HelloWorld.CollectionViews;
 using HelloWorld.ControlsDemo;
 using HelloWorld.Grid;
 using HelloWorld.MVVM;
@@ -15,7 +16,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new PowersOfThreeDemoPage();
+			MainPage = new PickerDemoPage();
 		}
 
 		protected override void OnStart ()

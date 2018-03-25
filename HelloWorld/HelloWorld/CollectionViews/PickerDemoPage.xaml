@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.CollectionViews.PickerDemoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="entry"
+                   Placeholder="Type something..."/>
+            <Picker Title="Keyboard Type" SelectedIndexChanged="Picker_OnSelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Default</x:String>
+                    <x:String>Text</x:String>
+                    <x:String>Chat</x:String>
+                    <x:String>Url</x:String>
+                    <x:String>Email</x:String>
+                    <x:String>Telephone</x:String>
+                    <x:String>Numeric</x:String>
+                </Picker.Items>
+                <Picker.SelectedIndex>6</Picker.SelectedIndex>
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
