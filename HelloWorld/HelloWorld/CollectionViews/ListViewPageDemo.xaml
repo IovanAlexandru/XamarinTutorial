@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.CollectionViews.ListViewPageDemo">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listView" SeparatorVisibility="None" SelectedItem="{Binding Source={x:Reference boxView}, Path=Color, Mode=TwoWay}"/>
+            <BoxView x:Name="boxView" Color="Lime" HeightRequest="100" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -16,7 +16,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new PickerDemoPage();
+			MainPage = new ListViewCustomCellDemoPage();
 		}
 
 		protected override void OnStart ()
