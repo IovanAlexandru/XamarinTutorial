@@ -8,6 +8,7 @@ using HelloWorld.ControlsDemo;
 using HelloWorld.Grid;
 using HelloWorld.MVVM;
 using HelloWorld.MVVM.Commands;
+using HelloWorld.TableView;
 using Xamarin.Forms;
 
 namespace HelloWorld
@@ -17,7 +18,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new CellContextMenuPage();
+			MainPage = new EntryFormPageDemo();
 		}
 
 		protected override void OnStart ()
