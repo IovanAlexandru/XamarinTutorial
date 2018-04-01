@@ -3,6 +3,7 @@ using HelloWorld.Bindings.CustomViews;
 using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
 using HelloWorld.CollectionViews;
+using HelloWorld.ContextMenu;
 using HelloWorld.ControlsDemo;
 using HelloWorld.Grid;
 using HelloWorld.MVVM;
@@ -16,7 +17,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new ListViewCustomCellDemoPage();
+			MainPage = new CellContextMenuPage();
 		}
 
 		protected override void OnStart ()

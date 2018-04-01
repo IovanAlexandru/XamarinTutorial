@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.ContextMenu.CellContextMenuPage">
+    <ContentPage.Content>
+        <ListView x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Label x:Name="lbl" Text="{Binding .}" FontAttributes="Italic"/>
+                        </ViewCell.View>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Add" Clicked="AddMenuItem_OnClicked" CommandParameter="{x:Reference lbl}"/>
+                            <MenuItem Text="Update" Clicked="UpdateMenuItem_OnClicked" CommandParameter="{x:Reference lbl}"/>
+                            <MenuItem Text="Delete" Clicked="DeleteMenuItem_OnClicked" CommandParameter="{x:Reference lbl}"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
