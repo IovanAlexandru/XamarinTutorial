@@ -19,7 +19,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new AlertWithCallbacksDemoPage();
+			MainPage = new ApmToTapDemoPage();
 		}
 
 		protected override void OnStart ()
