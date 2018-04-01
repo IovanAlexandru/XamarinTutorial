@@ -1,4 +1,5 @@
-﻿using HelloWorld.Bindings;
+﻿using HelloWorld.Async;
+using HelloWorld.Bindings;
 using HelloWorld.Bindings.CustomViews;
 using HelloWorld.Bindings.ValueConverters;
 using HelloWorld.Bitmaps;
@@ -18,7 +19,7 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new EntryFormPageDemo();
+			MainPage = new AlertWithCallbacksDemoPage();
 		}
 
 		protected override void OnStart ()
