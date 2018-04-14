@@ -9,6 +9,7 @@ using HelloWorld.ControlsDemo;
 using HelloWorld.Grid;
 using HelloWorld.MVVM;
 using HelloWorld.MVVM.Commands;
+using HelloWorld.Navigation;
 using HelloWorld.TableView;
 using Xamarin.Forms;
 
@@ -19,7 +20,11 @@ namespace HelloWorld
 		public App ()
 		{
 			InitializeComponent();
-			MainPage = new ApmToTapDemoPage();
+			MainPage = new NavigationPage(new Page1Demo())
+			{
+			    BarBackgroundColor = Color.DodgerBlue,
+                BarTextColor = Color.White
+			};
 		}
 
 		protected override void OnStart ()
